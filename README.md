@@ -1,5 +1,7 @@
 # Documentation
 
+- The app can be previewed at [https://labexamcodessearch.netlify.app/](https://labexamcodessearch.netlify.app/)
+
 ## Repository Description 
 
 - It contains the fron-end app of the backend at [https://github.com/sdsanchezm/exam-laboratory-codes-app] (written in C# .Net 6)
@@ -28,12 +30,9 @@
 - This application allows to reduce the time that a potential client is over the phone in 50% of the time.
 - This application, reduce the time in average from 10 minutes over the phone to 5 mins or less over the phone.
 
-## Demo
-
-- The app can be previewed at [https://labexamcodessearch.netlify.app/](https://labexamcodessearch.netlify.app/)
-
 ## Screens
 
- ![p1](./assets/p1.jpg)
+ ![p1](./assets/p1.jpg)<br>
+
  ![p2](./assets/p2.jpg)
 
