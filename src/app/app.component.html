@@ -6,10 +6,12 @@
                     class="text-warning">part of a name</span> of your desired exam (Example: <span
                     class="text-warning">"trygl"</span> for <span class="text-warning">"Triglycerides"</span>)</span>
         </div>
-        <div class="input-group input-group-lg my-5 w-50">
-            <input autofocus type="text" class="form-control rounded-0" placeholder="Enter Keyword" aria-label="Search"
-                (keyup.enter)="query1()" #queryInput>
-            <button class="btn btn-primary rounded-0" type="button" #queryButton (click)="query1()">Search</button>
+        <div class="row col-lg-6">
+            <div class="input-group input-group-lg my-5 ">
+                <input autofocus type="text" class="form-control rounded-0" placeholder="Enter Keyword" aria-label="Search"
+                    (keyup.enter)="query1()" #queryInput>
+                <button class="btn btn-primary rounded-0" type="button" #queryButton (click)="query1()">Search</button>
+            </div>
         </div>
     </div>
 
@@ -22,36 +24,38 @@
                 <div class="card-header"> Exam Code </div>
                 <div class="card-body">
                     <div class="row align-items-center">
-                        <h5 class="col-3 text-end card-title text-primary">Exam Name: </h5>
-                        <h6 class="col-7 text-start card-title text-secondary">{{item.examName}}.</h6>
-                        <div class="col-2 text-end"><a (click)="openLongContentModal(item.examId)" class="btn btn-sm btn-primary w-100 rounded-0"><i class="bi bi-eye-fill"></i> View</a></div>
+                        <h5 class="col-4 text-end text-primary">Exam Name: </h5>
+                        <h6 class="col-8 text-start text-secondary">{{item.examName}}.</h6>
                     </div>
                     <div class="row">
-                        <div class="col-3 text-end text-danger fw-bold">Exam Code:</div>
-                        <div class="col-7 text-start text-danger fw-bold">{{ item.examCode }}</div>
-                        <div class="col-2 text-end"><a (click)="copyToClipboard(item.examCode)"
-                            class="btn btn-sm btn-warning text-danger fw-bold w-100 rounded-0"><i class="bi bi-clipboard-fill"></i> Copy</a></div>
+                        <div class="col-4 text-end text-danger fw-bold">Exam Code:</div>
+                        <div class="col-8 text-start text-danger fw-bold">{{ item.examCode }}</div>
                     </div>
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Exam Number: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-4 text-end text-secondary fw-bold">Exam Number: </span>
+                        <span class="col-8 text-start card-title text-secondary">
                             <h6 class="">{{item.examNumber}}</h6>
                         </span>
                         <span class="col-2 text-end text-secondary"></span>
                     </div>
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Common Name: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-4 text-end text-secondary fw-bold">Common Name: </span>
+                        <span class="col-8 text-start card-title text-secondary">
                             <h6 class="">{{item.commonName}}</h6>
                         </span>
                         <span class="col-2 text-end text-secondary"></span>
                     </div>
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Preparation: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-4 text-end text-secondary fw-bold">Preparation: </span>
+                        <span class="col-8 text-start card-title text-secondary">
                             <h6 class="">{{item.preparationDescription}}</h6>
                         </span>
                         <span class="col-2 text-end text-secondary"></span>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6"></div>
+                        <div class="col-3 text-end"><a (click)="openLongContentModal(item.examId)" class="btn btn-sm btn-primary w-100 rounded-0"><i class="bi bi-eye-fill"></i> View</a></div>
+                        <div class="col-3 text-end"><a (click)="copyToClipboard(item.examCode)" class="btn btn-sm btn-warning text-danger fw-bold w-100 rounded-0"><i class="bi bi-clipboard-fill"></i> Copy</a></div>
                     </div>
                 </div>
             </div>
@@ -78,130 +82,130 @@
                 <div class="card-header"> Exam Code: {{ item.examCode }} </div>
                 <div class="card-body">
                     <div class="row align-items-center">
-                        <h5 class="col-3 text-end card-title text-primary">Exam Name: </h5>
-                        <h6 class="col-9 text-start card-title text-secondary">{{item.examName}}.</h6>
+                        <h5 class="col-lg-3 text-start text-primary">Exam Name: </h5>
+                        <h6 class="col-lg-9 text-start text-secondary">{{item.examName}}.</h6>
                     </div>
                     <div class="row">
-                        <div class="col-3 text-end text-danger fw-bold">Exam Code:</div>
-                        <div class="col-9 text-start text-danger fw-bold">{{ item.examCode }}</div>
+                        <div class="col-lg-3 text-start text-danger fw-bold">Exam Code:</div>
+                        <div class="col-lg-9 text-start text-danger">{{ item.examCode }}</div>
                     </div>
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Exam Number: </span>
-                        <span class="col-9 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Exam Number: </span>
+                        <span class="col-lg-9 text-start card-title text-secondary">
                             <h6 class="">{{item.examNumber}}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Common Name: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Common Name: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{item.commonName}}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Preparation: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Preparation: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{item.preparationDescription}}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Fasting Required: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Fasting Required: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{item.preparationDescription? "Yes, fasting required" : "No, fasting not required" }} for this exam.</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Observations for laboratory: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Observations for laboratory: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.observationForLaboratory }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Place: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Place: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.examPlace }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Schedule: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Schedule: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.schedule }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Cups Code: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Cups Code: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.cupsCode }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Sample Description: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Sample Description: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.sampleDescription }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Sample Stability: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Sample Stability: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.sampleStability }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Clinic Utility: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Clinic Utility: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.clinicUtility }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Mounting Days: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Mounting Days: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.mountingDays }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Time Results: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Time Results: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.timeResults }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Sample Technique: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Sample Technique: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.sampleTechnic }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-start text-secondary"></span>
                     </div>
 
                     <div class="row align-items-baseline">
-                        <span class="col-3 text-end text-secondary fw-bold">Processing Place: </span>
-                        <span class="col-7 text-start card-title text-secondary">
+                        <span class="col-lg-3 text-start text-secondary fw-bold">Processing Place: </span>
+                        <span class="col-lg-7 text-start card-title text-secondary">
                             <h6 class="">{{ item.processingPlace }}</h6>
                         </span>
-                        <span class="col-2 text-end text-secondary"></span>
+                        <span class="col-lg-2 text-end text-secondary"></span>
                     </div>
 
                 </div>
@@ -210,6 +214,6 @@
 
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Close click')">Close</button>
+        <button type="button" class="btn btn-secondary rounded-0" (click)="modal.dismiss('Close click')">Close</button>
     </div>
 </ng-template>
